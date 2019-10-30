@@ -10,7 +10,6 @@ exports.asyncAnswers = {
     return fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log('data', data);
         return data.people
           .map(person => person.name)
           .sort((a, b) => a.localeCompare(b));
